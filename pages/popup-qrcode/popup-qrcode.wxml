@@ -1,0 +1,8 @@
+<view class="tbc-poster-popup" style="width:{{posterWidth}}px;height:{{posterHeight}}px;position:fixed;top:{{(screenHeight - posterHeight) / 2}}px;z-index: 9990;left:{{(screenWidth - posterWidth) / 2}}px;"
+  catchtouchmove="true" wx:if="{{showPopup}}">
+  <image src="{{qrcodeUrl}}"  style="width:215px;height:215px"></image>
+</view>
+<view class="tui-popup-mask {{showPopup ? 'tui-mask-show':''}}" bindtap="close" catchtouchmove="true"></view>
+<view style="display: flex;justify-content: center">
+  <image src="{{qrcodeUrl}}"  style="width:100px;height:100px;" bindtap="changeImg"></image>
+</view>
